@@ -1,2 +1,31 @@
-<h1>Movies#new</h1>
-<p>Find me in app/views/movies/new.html.erb</p>
+<h1>Add A Movie</h1>
+
+<%= form_for @movie do |movie| %>
+  
+  <ul>
+
+  <li>
+  <%= movie.label :name %>
+  <%= movie.text_field :name %>
+  </li>
+  <li>
+  <%= movie.label :genre %>
+  <%= movie.text_field :genre %>
+  </li>
+  <li>
+  <%= movie.label :year %>
+  <%= movie.text_field :year %>
+  </li>
+    <li>
+  <%= movie.label :synopsis %>
+  <%= movie.text_field :synopsis %>
+  </li>
+    <li>
+  <%= movie.label :picture %>
+  <%= movie.text_field :picture %>
+  </li>
+
+  </ul>
+
+  <%= movie.submit "Create" %>
+<% end %>

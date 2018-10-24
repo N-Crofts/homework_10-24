@@ -1,2 +1,12 @@
-<h1>Movies#index</h1>
-<p>Find me in app/views/movies/index.html.erb</p>
+<h1>M O V I E S</h1> <a href="/movies/new">(add a movie)</a>
+
+<hr>
+
+<% @movies.each do |movie| %>
+<ul>
+  <li>
+  <%= link_to "#{movie.name}", movie_path(movie) %>
+  </li>
+</ul>
+<% end %>
+

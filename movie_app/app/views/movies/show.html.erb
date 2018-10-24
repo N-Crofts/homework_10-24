@@ -1,2 +1,27 @@
-<h1>Movies#show</h1>
-<p>Find me in app/views/movies/show.html.erb</p>
+<h1><%= @movie.name%></h1> 
+
+<%= link_to("Edit", "/movies/#{@movie.id}/edit") %>
+<br>
+<%= link_to("Delete", "/movies/"+@movie.id.to_s, method: :delete) %>
+
+<hr>
+
+<p>
+
+<ul>
+<li><i>Title:</i> <%= @movie.name%></li>
+
+<li><%= @movie.picture%></li>
+
+<li><i>Genre:</i> <%= @movie.genre%></li>
+
+<li><i>Year:</i> <%= @movie.year%></li>
+
+<li><i>Synopsis:</i> <%= @movie.synopsis%></li>
+
+
+</ul>
+
+</p>
+
+<a href="/movies/">Go Back</a>
