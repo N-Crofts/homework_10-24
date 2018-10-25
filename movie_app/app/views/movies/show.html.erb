@@ -9,9 +9,10 @@
 <p>
 
 <ul>
-<li><i>Title:</i> <%= @movie.name%></li>
 
-<li><%= @movie.picture%></li>
+<%= image_tag @movie.picture%>
+
+<li><i>Title:</i> <%= @movie.name%></li>
 
 <li><i>Genre:</i> <%= @movie.genre%></li>
 
