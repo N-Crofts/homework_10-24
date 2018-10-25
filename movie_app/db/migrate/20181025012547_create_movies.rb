@@ -6,6 +6,7 @@ class CreateMovies < ActiveRecord::Migration[5.2]
       t.integer :year
       t.string :synopsis
       t.string :picture
+      t.boolean :favorite
 
       t.timestamps
     end
